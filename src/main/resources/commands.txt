@@ -1,0 +1,2 @@
+dsetool create_core datastax_banking_iot_large.latest_transactions generateResources=true reindex=true coreOptions=rt.yaml
+dsetool create_core datastax_banking_iot_large.transactions generateResources=true reindex=true coreOptions=rt.yaml
