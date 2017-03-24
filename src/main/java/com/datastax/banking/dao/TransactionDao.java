@@ -94,8 +94,8 @@ public class TransactionDao {
 			this.getTransactionByCCno = session.prepare(GET_TRANSACTIONS_BY_CCNO);
 			this.getLatestTransactionByCCnoDate = session.prepare(GET_LATEST_TRANSACTIONS_BY_CCNO_DATE);
 
-			this.insertLatestTransactionStmt.setConsistencyLevel(ConsistencyLevel.LOCAL_QUORUM);
-			this.insertTransactionStmt.setConsistencyLevel(ConsistencyLevel.LOCAL_QUORUM);
+			this.insertLatestTransactionStmt.setConsistencyLevel(ConsistencyLevel.LOCAL_ONE);
+			this.insertTransactionStmt.setConsistencyLevel(ConsistencyLevel.LOCAL_ONE);
 
 			this.getLatestTransactionByCCno.setIdempotent(true);
 			this.insertLatestTransactionStmt.setIdempotent(true);

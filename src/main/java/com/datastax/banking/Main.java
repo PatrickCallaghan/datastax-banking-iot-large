@@ -36,7 +36,7 @@ public class Main {
 		Map<Integer, Transaction> transactionMap = new HashMap<Integer, Transaction>();
 		
 		//Executor for Threads
-		int noOfThreads = Integer.parseInt(PropertyHelper.getProperty("noOfThreads", "8"));
+		int noOfThreads = Integer.parseInt(PropertyHelper.getProperty("noOfThreads", "3"));
 		ExecutorService executor = Executors.newFixedThreadPool(noOfThreads);
 		TransactionDao dao = new TransactionDao(contactPointsStr.split(","));
 
